@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
   - [x] 01-01-PLAN.md — Monorepo scaffold + 9 stub workspaces (root tooling, Turbo, Biome, Vitest, gitignore, env template, all stubs)
   - [x] 01-02-PLAN.md — apps/mcp real Next.js 16 app (mcp-handler at /api/mcp/[transport], /api/health, Vitest sanity test)
-  - [ ] 01-03-PLAN.md — CI + Vercel link + Neon link + Turbo remote cache + public preview smoke check
+  - [x] 01-03-PLAN.md — CI + Vercel link + Neon link + Turbo remote cache + public preview smoke check
 
 ### Phase 2: Data Layer & Tenancy
 **Goal**: A multi-tenant Postgres schema and authenticated service layer exist such that no surface — MCP, CLI, web, iPhone — can ever read or mutate another household's data
@@ -96,7 +96,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations | 0/3 | Not started | - |
+| 1. Foundations | 3/3 | Plans complete; awaiting verification | - |
 | 2. Data Layer & Tenancy | 0/TBD | Not started | - |
 | 3. MCP Server (Primary v1 Surface) | 0/TBD | Not started | - |
 | 4. CLI + Tiny Web Admin | 0/TBD | Not started | - |

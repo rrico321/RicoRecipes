@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-05-14T05:11:30.000Z"
-last_activity: 2026-05-14 — Plan 01-02 complete (apps/mcp Next.js 16 app + /api/health + /api/mcp/[transport])
+status: phase-verify-ready
+stopped_at: Completed 01-03-PLAN.md (Phase 1 ready for verification)
+last_updated: "2026-05-14T18:30:00.000Z"
+last_activity: 2026-05-14 — Plan 01-03 complete (CI + Vercel + Neon wired; FOUND-02/03/04 all green; PR #1 squash-merged to main)
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 2
-  percent: 67
+  completed_plans: 3
+  percent: 100
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 ## Current Position
 
 Phase: 1 of 5 (Foundations)
-Plan: 2 of 3 in current phase (01-01 + 01-02 complete)
-Status: Executing
-Last activity: 2026-05-14 — Plan 01-02 complete (apps/mcp Next.js 16 app, /api/health smoke endpoint, mcp-handler mount with zero tools, vitest sanity test, four-gate Turbo pipeline green across 10 workspaces)
+Plan: 3 of 3 in current phase (01-01 + 01-02 + 01-03 complete — phase ready for /gsd-verify-work)
+Status: Phase 1 plans complete; awaiting phase verification
+Last activity: 2026-05-14 — Plan 01-03 complete (GitHub Actions four-gate CI on every PR; Vercel project `rico-recipes-mcp` linked to `apps/mcp` with Neon Postgres via Vercel-managed integration; Turbo remote cache wired; preview URL returns 200 to /api/health from the public internet)
 
-Progress: [███████░░░] 67%
+Progress: [██████████] 100% (Phase 1)
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 67%
 *Updated after each plan completion*
 | Phase 01-foundations P01 | ~10 min | 3 tasks | 28 files |
 | Phase 01-foundations P02 | ~10 min | 2 tasks | 9 files  |
+| Phase 01-foundations P03 | ~30 min | 3 tasks | 1 file   |
 
 ## Accumulated Context
 
@@ -72,10 +73,13 @@ Recent decisions affecting current work:
 - [Phase 1]: Plan 01-02: Biome must ignore Next-managed generated files (`**/next-env.d.ts`, `**/.next/**`) — Next rewrites with double quotes, fighting biome's single-quote rule
 - [Phase 1]: Plan 01-02: apps/mcp local dev port = 3001 (apps/web reserves 3000 for Phase 4)
 - [Phase 1]: Plan 01-02: Accept mcp-handler peer-dep warning for @modelcontextprotocol/sdk 1.29.0 vs declared 1.26.0 (1.x API-compatible; CLAUDE.md pin wins)
+- [Phase 1]: Plan 01-03: Vercel project = `rico-recipes-mcp` (team slug `robert-ricos-projects`); Neon Postgres provisioned via Vercel-managed integration; DATABASE_URL + 17 companion vars scoped to Production + Preview ONLY (Development scope deferred to Phase 2)
+- [Phase 1]: Plan 01-03: Vercel Deployment Protection (Hobby default Require-Login) disabled in Phase 1 to satisfy FOUND-04 public-internet clause — Phase 3 MUST re-enable together with Clerk MCP OAuth + `withMcpAuth` BEFORE any tool registers
 
 ### Pending Todos
 
-None yet.
+- [Phase 2]: Enable Development scope on `DATABASE_URL` + companion Neon env vars in Vercel project `rico-recipes-mcp` (Phase 1 only set Production + Preview)
+- [Phase 3]: Re-enable Vercel Deployment Protection on `rico-recipes-mcp` together with Clerk MCP OAuth + `withMcpAuth` BEFORE registering the first MCP tool (T-03-05 + T-03-06 hard constraint)
 
 ### Blockers/Concerns
 
@@ -89,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-14T05:11:30.000Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-05-14T18:30:00.000Z
+Stopped at: Completed 01-03-PLAN.md (Phase 1 plans complete; awaiting /gsd-verify-work)
 Resume file: None
