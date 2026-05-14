@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-05-14T05:08:39.833Z"
-last_activity: 2026-05-14 — Plan 01-01 complete (monorepo scaffold + 9 stubs)
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-05-14T05:11:30.000Z"
+last_activity: 2026-05-14 — Plan 01-02 complete (apps/mcp Next.js 16 app + /api/health + /api/mcp/[transport])
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 ## Current Position
 
 Phase: 1 of 5 (Foundations)
-Plan: 1 of 3 in current phase (01-01 complete)
+Plan: 2 of 3 in current phase (01-01 + 01-02 complete)
 Status: Executing
-Last activity: 2026-05-14 — Plan 01-01 complete (monorepo scaffold + 9 stubs, four-gate Turbo pipeline green)
+Last activity: 2026-05-14 — Plan 01-02 complete (apps/mcp Next.js 16 app, /api/health smoke endpoint, mcp-handler mount with zero tools, vitest sanity test, four-gate Turbo pipeline green across 10 workspaces)
 
-Progress: [███░░░░░░░] 33%
+Progress: [███████░░░] 67%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [███░░░░░░░] 33%
 
 *Updated after each plan completion*
 | Phase 01-foundations P01 | ~10 min | 3 tasks | 28 files |
+| Phase 01-foundations P02 | ~10 min | 2 tasks | 9 files  |
 
 ## Accumulated Context
 
@@ -68,6 +69,9 @@ Recent decisions affecting current work:
 - Phase 0: No in-app LLM calls — AI lives in user's external Claude/ChatGPT subscription via MCP
 - [Phase ?]: Plan 01-01: Dropped vitest projects field — Vitest 4 requires real configs per project; stubs share root config via tree-climb
 - [Phase ?]: Plan 01-01: Disabled pnpm 10 verify-deps-before-run — race-failed zero-dep stubs under Turbo parallel exec
+- [Phase 1]: Plan 01-02: Biome must ignore Next-managed generated files (`**/next-env.d.ts`, `**/.next/**`) — Next rewrites with double quotes, fighting biome's single-quote rule
+- [Phase 1]: Plan 01-02: apps/mcp local dev port = 3001 (apps/web reserves 3000 for Phase 4)
+- [Phase 1]: Plan 01-02: Accept mcp-handler peer-dep warning for @modelcontextprotocol/sdk 1.29.0 vs declared 1.26.0 (1.x API-compatible; CLAUDE.md pin wins)
 
 ### Pending Todos
 
@@ -85,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-14T05:08:35.749Z
-Stopped at: Phase 1 context gathered
+Last session: 2026-05-14T05:11:30.000Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None

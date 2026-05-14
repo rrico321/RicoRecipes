@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A preview deploy of the MCP server URL responds 200 to a smoke health check from the public internet
 **Plans**: 3 plans
   - [x] 01-01-PLAN.md — Monorepo scaffold + 9 stub workspaces (root tooling, Turbo, Biome, Vitest, gitignore, env template, all stubs)
-  - [ ] 01-02-PLAN.md — apps/mcp real Next.js 16 app (mcp-handler at /api/mcp/[transport], /api/health, Vitest sanity test)
+  - [x] 01-02-PLAN.md — apps/mcp real Next.js 16 app (mcp-handler at /api/mcp/[transport], /api/health, Vitest sanity test)
   - [ ] 01-03-PLAN.md — CI + Vercel link + Neon link + Turbo remote cache + public preview smoke check
 
 ### Phase 2: Data Layer & Tenancy
