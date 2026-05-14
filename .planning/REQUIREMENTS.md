@@ -7,7 +7,7 @@
 
 ### Foundations (Monorepo + Infra)
 
-- [ ] **FOUND-01**: Turborepo monorepo scaffolded with pnpm workspaces and `apps/{mcp,mobile,cli,web}` + `packages/{db,core,auth,api,sync,ui}` layout
+- [x] **FOUND-01**: Turborepo monorepo scaffolded with pnpm workspaces and `apps/{mcp,mobile,cli,web}` + `packages/{db,core,auth,api,sync,ui}` layout
 - [ ] **FOUND-02**: Neon Postgres project provisioned and linked to a Vercel project via `vercel link --repo`
 - [ ] **FOUND-03**: CI runs typecheck (tsc), unit tests (Vitest), and lint (Biome) on every PR
 - [ ] **FOUND-04**: First preview deploy of the MCP server succeeds end-to-end (smoke health check)
@@ -132,7 +132,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Pending |
