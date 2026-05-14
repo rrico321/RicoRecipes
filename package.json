@@ -1,0 +1,25 @@
+{
+  "name": "rico-recipe",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "build": "turbo run build",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "turbo": "^2.9.12",
+    "typescript": "^5.7.0",
+    "@biomejs/biome": "^2.4.15",
+    "vitest": "^4.1.6",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=10.0.0"
+  }
+}
