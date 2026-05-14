@@ -28,11 +28,12 @@ A user can talk to an AI agent about their recipe library — adding, finding, p
 - [ ] CLI exposing the same tool surface for terminal users and agents
 - [ ] Households / sharing: users can belong to a household and share recipes with members
 - [ ] Cook-along experience on iPhone: stepped instructions, timers, ingredient scaling
+- [ ] Public sharing & social: users can share recipes publicly, have a public profile page, follow other users, and browse a "Discover" feed of shared recipes
 
 ### Out of Scope
 
 - Self-hosting as a first-class deployment path — user opted for managed (Vercel + Neon) to ship faster
-- Public recipe discovery / social feed — focus is personal + household libraries, not a community product
+- Public recipe discovery / social / follow features in v1 — deferred to v2 fast-follow to keep v1 shippable
 - Android app for v1 — Expo gives this for free later, not a v1 goal
 - Recipe import from cookbook photos / OCR — deferred; URL + paste covers the input need for v1
 - Built-in grocery / instacart integrations — out of scope until core value is proven
