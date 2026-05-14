@@ -6,7 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "includes": ["**", "!**/next-env.d.ts", "!**/.next/**"]
   },
   "formatter": {
     "enabled": true,
